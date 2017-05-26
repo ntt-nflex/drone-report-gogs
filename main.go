@@ -16,7 +16,7 @@ func main() {
 	owner := os.Getenv("DRONE_REPO_OWNER")
 	repo := os.Getenv("DRONE_REPO_NAME")
 	buildNumber := os.Getenv("DRONE_BUILD_NUMBER")
-	buildStatus := os.Getenv("DRONE_BUILD_STATUS")
+	buildStatus := os.Getenv("CI_BUILD_STATUS")
 	index := os.Getenv("DRONE_PULL_REQUEST")
 
 	message := buildMessage(droneURL, owner, repo, buildStatus, buildNumber)
